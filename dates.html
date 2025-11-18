@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Poetry Garden</title>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <section class="menu">
+        <div class="nav">
+            <div class="logo">
+                <img src="locket.png" alt="Logo">
+                <h1>poetry♡<b>Garden</b></h1>
+            </div>
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="poem.html">POEMS</a></li>
+                <li><a href="dates.html">DATES</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SEARCH BAR -->
+<div class="poem-search">
+    <div class="search-wrapper">
+        <div class="search icon"></div>
+        <input type="text" id="searchInput" placeholder="Search dates...">
+    </div>
+</div>
+
+
+<!--Date cards-->
+<section class="dates">
+    <!-- Date Card 1 -->
+    <div class="date-card" data-title="I Choose You">
+        <h3 class="date-title">Monday, March 11, 2024</h3>
+        <div class="date-content">
+            <p>
+                Well, well isn't this the genius. The day it all became official, our anniversary date❤🤭
+                Well actually we started dating on Sunday the 10th but it became official on this date. A very strange way to start a relationship. You sent me a tiktok telling me you were ready to be with me😂.
+                Well it was still cute and lovely.
+            </p>
+        </div>
+    </div>
+    <!-- Date Card 2 -->
+    <div class="date-card" data-title="I Choose You">
+        <h3 class="date-title"> Thursday, May 16, 2024</h3>
+        <div class="date-content">
+            <p>
+                Today we had our first kiss. I still remember how awkward it was pecking innocently beside the multipurpose hall.
+                It was sweet and the beginning of something new. You took a step into making things more intimate and romantic.
+            </p>
+        </div>
+    </div>
+    <!-- Date Card 3 -->
+    <div class="date-card" data-title="I Choose You">
+        <h3 class="date-title">Wednesday June 5, 2024.</h3>
+        <div class="date-content">
+            <p>
+                We had our very first kiss, our first French kiss
+                Do you remember? 
+                Well the very first good kiss😂. Our first kiss was so awkward with us keeping it safe with just lip pecks, then we kissed for real on this day.
+                We clicked the teeths so many times looking back it was kinda cute and funny.
+            </p>
+        </div>
+    </div>
+    <!-- Date Card 4 -->
+    <div class="date-card" data-title="I Choose You">
+        <h3 class="date-title">Friday, October 25th, 2024</h3>
+        <div class="date-content">
+            <p>
+                Now this particular day was very intimate 🤭
+                The day I did numnum for the first time. The night was cold just us in the multipurpose hall alone. The rain just finished falling and we were about to go back to our hostels until passion took control and we established a new type of connection🥹💕. Easily one of my favourite moment with you.
+            </p>
+        </div>
+    </div>
+    <!-- Date Card 5 -->
+    <div class="date-card" data-title="I Choose You">
+        <h3 class="date-title">Saturday, April 5, 2025.</h3>
+        <div class="date-content">
+            <p>
+                Our first date. A shame we haven't gone on another one, even tho it was small at least it was something and we had fun.
+                You were totally struggling to finish that pizza😂
+                Dunno why you still wanted more, you fish!
+                I loved how much of a smile you had. It wasn't grand but it was done with pure intentions of love.
+            </p>
+        </div>
+    </div>
+    <!-- Date Card 6 -->
+    <div class="date-card" data-title="I Choose You">
+        <h3 class="date-title">Saturday July 12th, 2025</h3>
+        <div class="date-content">
+            <p>
+                It took a lot of convincing to get you to come over.
+                Well it wasn't a lot tho seeing how you wanted to and it wasn't as difficult as it could've been on a regular day. It was kinda exciting how I snuck you out when my dad came, it felt like all those movies 😂. I loved how we snuggled and almost fell asleep on my bed 🤭🥹 it was extremely cozy...and that deed!! You finished work that day😂...well the one of recent are better but still 🤭😂I was taken away❤😍.
+            </p>
+        </div>
+    </div>
+    <!-- Date Card 7 -->
+    <div class="date-card" data-title="I Choose You">
+        <h3 class="date-title">Saturday July 19th, 2025</h3>
+        <div class="date-content">
+            <p>
+                Now this was the one day worth remembering. 
+                Even tho it came with some issues we resolved them.
+                I enjoyed cooking with you, low key liked how you said you didn't want pancakes yet you still took from mine🤦🏽😂. You enjoyed that day tho
+                Your man is a chef babygirl 🫡😌...if you're not careful I'll go to someone else😂.
+                Only wish it could've been a sleep over😂🤧. Maybe next time I'll stuff you in my wardrobe for the night😂
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<section class="spin">
+    <div class="event">
+        <img src="cats.jpeg" alt="">
+        <img src="download.jpeg" alt="">
+    </div>
+
+</section>
+<section class="spin2">
+    <div class="event2">
+        <img src="img2.jpeg" alt="">
+        <img src="Couple love.jpeg" alt="">
+    </div>
+</section>
+
+
+ <!-- SCRIPT FOR ACCORDION -->
+ <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+        const cards = document.querySelectorAll(".date-card");
+        const searchInput = document.getElementById("searchInput");
+    
+        /* ----------------- ACCORDION ----------------- */
+        cards.forEach(card => {
+            card.addEventListener("click", (event) => {
+                event.stopPropagation();
+    
+                // close others
+                cards.forEach(other => {
+                    if (other !== card) other.classList.remove("open");
+                });
+    
+                // toggle this one
+                card.classList.toggle("open");
+            });
+        });
+    
+        /* ----------------- LIVE SEARCH ----------------- */
+        searchInput.addEventListener("keyup", () => {
+            let filter = searchInput.value.toLowerCase();
+    
+            cards.forEach(card => {
+                let title = card.querySelector(".date-title").textContent.toLowerCase();
+    
+                if (title.includes(filter)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    
+    });
+    </script>
+        
+
+</body>
+</html>

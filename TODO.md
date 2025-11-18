@@ -1,0 +1,3 @@
+- [x] Add CSS rules to style.css to arrange the navigation menu directly under the logo using flexbox
+- [x] Style the logo, ul, li, and a elements for basic appearance
+- [x] Test the layout by opening index.html in a browser
